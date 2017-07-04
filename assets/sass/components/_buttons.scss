@@ -1,0 +1,46 @@
+@mixin button-bg($bg, $bgafter) {
+	border: 0;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    background-color: $bg;
+    color: $c-white;
+	transition: background-color 0.3s ease;
+	position: relative;
+	cursor: pointer;
+	font-family: $font-primary;
+	&:hover {
+	    background-color: lighten($bg,10%);
+	    transition: background-color 0.3s ease;
+	}
+	&:hover:before {
+	    //background-color: lighten($bgafter,5%);
+	    transition: background-color 0.3s ease;
+	    background-color: transparent;
+	    border: 1px solid $bgafter;
+	}
+	&:before {
+		@include pseudo;
+		width: 100%;
+		height: 100%;
+		background-color: $bgafter;
+		z-index: -1;
+		bottom: -10px;
+		left: 10px;
+		transition: background-color 0.3s ease;
+	}
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.btn-dark {
+	@include button-bg($c-darkgrey, $c-beige);
+}
+
+.btn-black {
+	@include button-bg($c-black, $c-white);
+}
+
+ 
+

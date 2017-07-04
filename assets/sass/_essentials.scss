@@ -1,0 +1,321 @@
+/*
+	****************** Settings ******************
+*/
+
+$desktopHD: 1280px;
+$desktop: 960px;
+$tablet: 768px;
+$mobile: 540px;
+
+$gutter: 20px;
+$gutter-sm: 10px;
+$vgutter: 40px;
+
+
+/*
+	****************** Essentials ******************
+*/
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased !important;
+	overflow-x: hidden;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	text-decoration: underline;
+	background-color: transparent;
+		&:active,
+		&:hover {
+			outline: none;
+		}
+}
+
+ul {
+	margin: 0;
+}
+
+input, button, textarea {
+	-webkit-appearance: none;
+}
+
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+
+/*
+	****************** Fluids ******************
+	These columns are made for nesting.
+	First define the max-width of .container and nest other classes in this element.
+*/
+
+.container {
+  	width: 100%;
+  	display: block;
+  	max-width: $desktopHD;
+  	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	[class*='col-'] {
+		display: block;
+	}
+	.col-12 {
+		width: 100%;
+	}
+	.col-11 {
+		width: 100% / 12 * 11;
+	}
+
+	.col-10 {
+		width: 100% / 12 * 10;
+	}
+
+	.col-9 {
+		width: 100% / 12 * 9;
+	}
+
+	.col-8 {
+		width: 100% / 12 * 8;
+	}
+
+	.col-7 {
+		width: 100% / 12 * 7;
+	}
+
+	.col-6 {
+		width: 100% / 12 * 6;
+	}
+
+	.col-5 {
+		width: 100% / 12 * 5;
+	}
+
+	.col-4 {
+		width: 100% / 12 * 4;
+	}
+
+	.col-3 {
+		width: 100% / 12 * 3;
+	}
+
+	.col-2 {
+		width: 100% / 12 * 2;
+	}
+
+	.col-1 {
+		width: 100% / 12 * 1;
+	}
+	.col-0 {
+		display: none;
+	}
+  @media (max-width: $desktop) {
+		.col-d-12 {
+			width: 100%;
+		}
+		.col-d-11 {
+			width: 100% / 12 * 11;
+		}
+		.col-d-10 {
+			width: 100% / 12 * 10;
+		}
+		.col-d-9 {
+			width: 100% / 12 * 9;
+		}
+		.col-d-8 {
+			width: 100% / 12 * 8;
+		}
+		.col-d-7 {
+			width: 100% / 12 * 7;
+		}
+		.col-d-6 {
+			width: 100% / 12 * 6;
+		}
+		.col-d-5 {
+			width: 100% / 12 * 5;
+		}
+		.col-d-4 {
+			width: 100% / 12 * 4;
+		}
+		.col-d-3 {
+			width: 100% / 12 * 3;
+		}
+		.col-d-2 {
+			width: 100% / 12 * 2;
+		}
+		.col-d-1 {
+			width: 100% / 12 * 1;
+		}
+		.col-d-0 {
+			display: none;
+		}
+	}
+	@media (max-width: $tablet) {
+		.col-t-12 {
+			width: 100%;
+		}
+		.col-t-11 {
+			width: 100% / 12 * 11;
+		}
+		.col-t-10 {
+			width: 100% / 12 * 10;
+		}
+		.col-t-9 {
+			width: 100% / 12 * 9;
+		}
+		.col-t-8 {
+			width: 100% / 12 * 8;
+		}
+		.col-t-7 {
+			width: 100% / 12 * 7;
+		}
+		.col-t-6 {
+			width: 100% / 12 * 6;
+		}
+		.col-t-5 {
+			width: 100% / 12 * 5;
+		}
+		.col-t-4 {
+			width: 100% / 12 * 4;
+		}
+		.col-t-3 {
+			width: 100% / 12 * 3;
+		}
+		.col-t-2 {
+			width: 100% / 12 * 2;
+		}
+		.col-t-1 {
+			width: 100% / 12 * 1;
+		}
+		.col-t-0 {
+			display: none;
+		}
+	}
+	@media (max-width: $mobile) {
+		.col-m-12 {
+			width: 100%;
+		}
+		.col-m-11 {
+			width: 100% / 12 * 11;
+		}
+		.col-m-10 {
+			width: 100% / 12 * 10;
+		}
+		.col-m-9 {
+			width: 100% / 12 * 9;
+		}
+		.col-m-8 {
+			width: 100% / 12 * 8;
+		}
+		.col-m-7 {
+			width: 100% / 12 * 7;
+		}
+		.col-m-6 {
+			width: 100% / 12 * 6;
+		}
+		.col-m-5 {
+			width: 100% / 12 * 5;
+		}
+		.col-m-4 {
+			width: 100% / 12 * 4;
+		}
+		.col-m-3 {
+			width: 100% / 12 * 3;
+		}
+		.col-m-2 {
+			width: 100% / 12 * 2;
+		}
+		.col-m-1 {
+			width: 100% / 12 * 1;
+		}
+		.col-m-0 {
+			display: none;
+		}
+	}
+}
+
+.center {
+	margin: 0 auto;
+	float: none;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+
+@media (max-width: $tablet) {
+	.center-t {
+		margin: 0 auto;
+		float: none;
+	}
+	.left-t {
+		float: left;
+	}
+	.right-t {
+		float: right;
+	}
+}
+
+@media (max-width: $mobile) {
+	.center-m {
+		margin: 0 auto;
+		float: none;
+	}
+	.left-m {
+		float: left;
+	}
+	.right-m {
+		float: right;
+	}
+}
+
+.padding {
+	padding-right: $gutter;
+	padding-left: $gutter;
+}
+.padding-top {
+	padding-top: $vgutter;
+}
+.row {
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+}
+.padding-sm {
+	padding-right: $gutter-sm;
+	padding-left: $gutter-sm;
+}
+.row-sm {
+	margin-left: -$gutter-sm;
+	margin-right: -$gutter-sm;
+}
+.padding-bottom {
+	padding-top: $vgutter;
+}
+.clearfix {
+	clear: both;
+}
