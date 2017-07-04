@@ -1,0 +1,82 @@
+.single {
+	header {
+		display: none;
+	}
+
+	.single-header {
+		position: relative;
+		height: 500px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		@media (max-width: $tablet) {
+			height: 300px;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: $c-black;
+			opacity: 0.3;
+			z-index: 0;
+		}
+
+		.container {
+			position: relative;
+			width: 90%;
+			height: 100%;
+			margin: 0 auto;
+			.link-back-container {
+				padding: 30px 0;
+
+				.link-back {
+				    display: inline-block;
+				    text-decoration: none;
+				    color: $c-white;
+				    cursor: pointer;
+				    text-transform: uppercase;
+				}
+			}
+
+			h1 {
+				position: absolute;
+				display: block;
+				bottom: 60px;
+				left: 50%;
+				width: 100%;
+				max-width: 640px;
+				font-size: 72px;
+				line-height: 72px;
+				color: $c-white;
+				transform: translateX(-50%);
+
+				@media (max-width: $tablet) {
+					font-size: 36px;
+					line-height: 36px;
+					bottom: 40px;
+				}
+			}
+		}
+	}
+
+	.single-content {
+		.container {
+			width: 90%;
+			max-width: 640px;
+			margin: 60px auto;
+
+			@media (max-width: $tablet) {
+				margin: 40px auto;
+			}
+
+			p {
+				color: $c-black;
+				margin: 0;
+			}
+		}
+	}
+}

@@ -9,6 +9,7 @@
 
 	<?php wp_head(); ?>
 </head>
+<div class="background"></div><!-- /.background -->
 <body <?php body_class(); ?>>
 
 <header>

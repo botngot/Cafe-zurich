@@ -116,3 +116,19 @@ function smoothScroll(el, duration){
     }
     step();
 }
+
+$(document).on('resize', function(){
+	$('.photo-grid').packery({
+		itemSelector: '.single-photo',
+		gutter: 20
+	});
+});
+
+$(document).ready(function(){
+	$(document).resize();
+})
+
+
+
+
+

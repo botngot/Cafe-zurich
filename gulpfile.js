@@ -18,7 +18,7 @@ gulp.task('serve', ['sass' , 'scripts'], function() {
 		// }
 		
 		proxy: {
-			target: "http://localhost:8888", // can be [virtual host, sub-directory, localhost with port]
+			target: "http://cafezurich.dev", // can be [virtual host, sub-directory, localhost with port]
 			ws: true // enables websockets
 		}
 	});

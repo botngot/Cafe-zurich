@@ -1,0 +1,35 @@
+.page-template-page-ambiance {
+	header {
+		display: none;
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.link-back-container {
+			padding: 30px 0;
+
+			.link-back {
+			    display: inline-block;
+			    text-decoration: none;
+			    color: #000;
+			    cursor: pointer;
+			    text-transform: uppercase;
+			}
+		}
+
+		.photo-grid {
+			width: 100%;
+
+			.single-photo {
+				width: calc(50% - 10px);
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+}

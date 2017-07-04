@@ -123,11 +123,11 @@
 	 						<div class="nieuws__bottom">
 								<h3 class="nieuws__bottom--title"><?php the_title(); ?></h3>
 								<div class="nieuws__bottom--excerpt">
-									<?php $content = get_the_content();
+									<?php $content = get_field('content');
 									echo wp_trim_words( $content , '22' ); ?>
 								</div>
 
-								<a class="nieuws__bottom--readmore" href="">Lees verder...</a> 
+								<a class="nieuws__bottom--readmore" href="<?php the_permalink(); ?>">Lees verder...</a> 
 							</div>
 
 						</div>
