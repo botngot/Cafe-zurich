@@ -79,6 +79,7 @@
 		<div class="container center">
 			<h2 class="ambiance__title title--white padding">AMBIANCE</h2>
 			<div class="slider__arrows"></div>
+            <a class="photo-link" href="<?php echo home_url(); ?>/ambiance">Bekijk meer foto's</a>
 		</div>
 		
 		

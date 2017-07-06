@@ -25,6 +25,10 @@
 			.single-photo {
 				width: calc(50% - 10px);
 
+				@media (max-width: $mobile) {
+					width: 100%;
+				}
+
 				img {
 					width: 100%;
 					height: auto;
